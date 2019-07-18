@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!doctype html>
 <html lang="en">
   <head>
@@ -6,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.5">
-    <title>Album example · Bootstrap</title>
+    <title>Kano --Portfolio</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
 
@@ -35,15 +36,15 @@
   <body>
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Kano Padhiyar!</a>
+        <a class="navbar-brand" href="{% url 'home' %}">Kano Padhiyar!</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ml-auto">
-            <a class="nav-item nav-link" href="#">Twitter</a>
-            <a class="nav-item nav-link" href="#">Resume</a>
-            <a class="nav-item nav-link" href="/blog/">Blog</a>
+            <a class="nav-item nav-link" href="https://www.instagram.com/pythonistas/">Instagram</a>
+            <a class="nav-item nav-link" href="{% static 'resume.pdf' %}">Resume</a>
+            <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>
           </div>
         </div>
       </nav>
@@ -54,9 +55,10 @@
   <section class="jumbotron text-center">
     <div class="container">
       <h1 class="jumbotron-heading">Hi i'm Kano</h1>
-      <p class="lead text-muted">hey i am a student. i like to learn new programming language<p>
+      <p class="lead text-muted">i like to learn new programming language<p>
         <a href="mailto:gamelobby0@gmail.com" class="btn btn-primary my-2">Email me!</a>
       </p>
+      <img src="{% static 'kano.png' %}" height="300" />
     </div>
   </section>
 
